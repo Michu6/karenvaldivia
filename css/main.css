@@ -1,0 +1,583 @@
+@font-face {
+  font-family: "Bromello";
+  src: url("../fonts/bromello/bromello.otf") format("opentype"); }
+@font-face {
+  font-family: "Raleway-Regular";
+  src: url("../fonts/raleway/Raleway-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: "Raleway-Medium";
+  src: url("../fonts/raleway/Raleway-Medium.ttf") format("truetype"); }
+@font-face {
+  font-family: "Raleway-SemiBold";
+  src: url("../fonts/raleway/Raleway-SemiBold.ttf") format("truetype"); }
+@font-face {
+  font-family: "Raleway-Bold";
+  src: url("../fonts/raleway/Raleway-Bold.ttf") format("truetype"); }
+::-moz-selection {
+  /* Code for Firefox */
+  color: #ff4463;
+  background: white; }
+
+::selection {
+  color: #ff4463;
+  background: white; }
+
+.container {
+  width: 85%; }
+
+h2 {
+  color: #ff4463;
+  font-size: 3.5em;
+  font-family: "Raleway-Bold", arial, sans-serif;
+  border-left: 6px solid #ff4463; }
+
+#textBig {
+  color: #ff4463;
+  font-size: 4em;
+  font-family: "Raleway-Bold", arial, sans-serif; }
+
+#main {
+  padding-bottom: 100px; }
+  #main #titName {
+    color: #201713;
+    font-size: 8em;
+    font-family: "Bromello", arial, sans-serif; }
+  #main img {
+    margin-bottom: 41px;
+    width: 85%;
+    margin-top: 36px; }
+
+#navbar {
+  z-index: 1000;
+  position: absolute;
+  left: 50%;
+  margin-left: -47px; }
+
+nav {
+  background-color: #201713; }
+  nav .brand-logo {
+    color: #f2d66b;
+    font-size: 1.6em;
+    font-family: "Bromello", arial, sans-serif; }
+
+#developerWeb {
+  padding: 3% 0; }
+  #developerWeb .card .card-title {
+    color: 1em;
+    font-size: #201713;
+    font-family: "Raleway-Medium", arial, sans-serif; }
+  #developerWeb .card .card-reveal {
+    background-color: #ff4463; }
+    #developerWeb .card .card-reveal .linkProject {
+      color: white; }
+
+#graphicDesign {
+  padding: 3% 0; }
+
+#myIcon img {
+  width: 200px; }
+
+#bgmenu {
+  background: #ff4463;
+  display: inline-block;
+  height: 40px;
+  position: fixed;
+  width: 80px;
+  z-index: 20000; }
+  #bgmenu:before {
+    border-top: 20px solid #ff4463;
+    border-left: 41px solid transparent;
+    border-right: 40px solid transparent;
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 40px;
+    width: 0; }
+
+.headerLine {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  padding-top: 2%;
+  background: #f2d66b center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .headerLine:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-bottom: 150px solid white;
+    border-left: 3000px solid transparent; }
+
+.hamburguer {
+  width: 32px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+  transition: .4s; }
+  .hamburguer .bar {
+    position: absolute;
+    width: 32px;
+    height: 5px;
+    background: #FFF;
+    transition: .2s;
+    outline: 1px solid transparent; }
+  .hamburguer .bar-1 {
+    top: 0;
+    left: 0; }
+  .hamburguer .bar-2 {
+    top: 10px;
+    left: 0; }
+  .hamburguer .bar-3 {
+    top: 20px;
+    left: 0; }
+
+#slide-out {
+  background-color: #201713;
+  padding-top: 5%;
+  text-align: center;
+  width: 90%; }
+  #slide-out a {
+    color: white;
+    font-size: 1.5em;
+    font-family: "Raleway-Medium", arial, sans-serif; }
+    #slide-out a:hover {
+      color: #ff4463;
+      text-decoration: underline; }
+  #slide-out li.name {
+    color: #423f40;
+    font-size: 3em;
+    font-family: "Bromello", arial, sans-serif; }
+
+#aboutMe {
+  padding: 3% 0; }
+  #aboutMe p {
+    color: #434142;
+    font-size: 1.2em;
+    font-family: "Raleway-SemiBold", arial, sans-serif; }
+    #aboutMe p span {
+      color: #ff4463;
+      font-size: 1.2em;
+      font-family: "Raleway-Bold", arial, sans-serif; }
+  #aboutMe #hexagonImg img {
+    width: 70%; }
+
+#education {
+  padding: 3% 0; }
+  #education img {
+    width: 50%; }
+  #education .gifEducation {
+    width: 100%; }
+  #education #curves .textEdu:last-child {
+    border-bottom: none; }
+  #education .download {
+    color: #ff4463;
+    font-size: 1.8em;
+    font-family: "Raleway-Bold", arial, sans-serif;
+    border-radius: 45px;
+    border: 2px solid #ff4463;
+    margin: 0 auto;
+    width: 80%; }
+    #education .download a:hover {
+      color: #ff4463; }
+  #education #curves {
+    background-image: url("../svg/shapeEdu.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -webkit-background-size: 430px;
+    -moz-background-size: 430px;
+    -o-background-size: 430px;
+    background-size: 430px; }
+    #education #curves .textEdu {
+      padding-bottom: 7%; }
+      #education #curves .textEdu h5 {
+        color: #dd0025;
+        font-size: 1.5em;
+        font-family: "Raleway-SemiBold", arial, sans-serif; }
+      #education #curves .textEdu p {
+        color: #434142;
+        font-size: 1.2em;
+        font-family: "Raleway-Regular", arial, sans-serif;
+        margin-top: 0;
+        line-height: normal; }
+        #education #curves .textEdu p.dateEdu {
+          font-family: 'Raleway-SemiBold';
+          margin-top: 0; }
+      #education #curves .textEdu .mg-b0 {
+        margin-bottom: 0; }
+      #education #curves .textEdu img.logoArea {
+        width: 100%; }
+
+#experience {
+  padding: 3% 0; }
+  #experience h4 {
+    color: #ff4463;
+    font-size: 1.8em;
+    font-family: "Raleway-SemiBold", arial, sans-serif; }
+  #experience p {
+    color: #201713;
+    font-size: 1.2em;
+    font-family: "Raleway-Medium", arial, sans-serif;
+    text-align: justify; }
+    #experience p.boldText {
+      color: #201713;
+      font-size: 1.2em;
+      font-family: "Raleway-Bold", arial, sans-serif;
+      margin: 0; }
+  #experience .slider .indicators .indicator-item {
+    background-color: #f2d66b;
+    width: 20px;
+    height: 20px; }
+    #experience .slider .indicators .indicator-item.active {
+      background-color: #ff4463; }
+  #experience .slider .slides {
+    background-color: white; }
+
+#portfolio {
+  background: url("../images/bgportfolio.jpg") 0 100% no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  #portfolio .bgportfolio {
+    background-color: rgba(255, 67, 99, 0.7);
+    padding: 3% 0; }
+  #portfolio h2 {
+    color: white;
+    border-left: 6px solid white; }
+  #portfolio h3 {
+    color: #f2d66b;
+    font-size: 2em;
+    font-family: "Raleway-Bold", arial, sans-serif; }
+  #portfolio p {
+    color: white;
+    font-size: 1.3em;
+    font-family: "Raleway-Regular", arial, sans-serif;
+    margin: 0 20%; }
+  #portfolio img {
+    width: 50%; }
+
+footer {
+  background-color: #201713;
+  padding: 3% 0; }
+  footer h4 {
+    color: white;
+    font-size: 2.6em;
+    font-family: "Raleway-Bold", arial, sans-serif; }
+  footer img {
+    width: 200px; }
+  footer p {
+    color: #ff4463;
+    font-size: 1.6em;
+    font-family: "Raleway-Medium", arial, sans-serif; }
+  footer a.btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    width: 100%; }
+    footer a.btn:hover {
+      background-color: #ff4463; }
+  footer .index {
+    color: white;
+    cursor: pointer; }
+  footer span {
+    color: #f2d66b;
+    font-size: 1.5em;
+    font-family: "Bromello", arial, sans-serif; }
+
+@media screen and (max-width: 479px) {
+  #navbar {
+    margin-left: -35px; }
+    #navbar #bgmenu {
+      height: 30px;
+      width: 70px; }
+      #navbar #bgmenu:before {
+        border-left: 35px solid transparent;
+        border-right: 35px solid transparent;
+        top: 30px; }
+
+  h2 {
+    font-size: 2.6em;
+    border-left: 4px solid #ff4463; }
+
+  #main {
+    padding-bottom: 30px; }
+    #main #titName {
+      font-size: 5.2em;
+      line-height: 1em; }
+    #main .headerLine {
+      padding-top: 12%; }
+
+  #aboutMe {
+    padding: 2% 0;
+    text-align: center; }
+    #aboutMe #textBig {
+      font-size: 3.2em; }
+    #aboutMe p {
+      font-size: 0.9em; }
+
+  #education #curves {
+    background: none; }
+    #education #curves .textEdu {
+      border-bottom: 1px solid #ff4463; }
+      #education #curves .textEdu:last-child {
+        border-bottom: none; }
+      #education #curves .textEdu .row {
+        margin-bottom: 0; }
+      #education #curves .textEdu h5 {
+        font-size: 1.1em; }
+      #education #curves .textEdu p {
+        font-size: 0.9em; }
+      #education #curves .textEdu .dateEdu {
+        font-size: 0.8em; }
+
+  #education .download {
+    color: #ff4463;
+    font-size: 1.5em;
+    font-family: "Raleway-Bold", arial, sans-serif;
+    border-radius: 20px;
+    border: 2px solid #ff4463;
+    margin-bottom: 50px;
+    padding: 3%;
+    width: 100%; }
+    #education .download a:hover {
+      color: #ff4463; }
+
+  #portfolio h3 {
+    font-size: 1.6em; }
+  #portfolio p {
+    font-size: 1em;
+    margin: 0 5%; }
+  #portfolio .col:last-child {
+    margin-top: 5%; }
+
+  footer h4 {
+    font-size: 1.8em; }
+  footer img {
+    width: 150px; }
+  footer p {
+    font-size: 1em;
+    margin: 0 10%; }
+  footer a.btn {
+    margin: 2% 0;
+    width: 50%; } }
+@media screen and (min-width: 480px) and (max-width: 639px) {
+  h2 {
+    font-size: 2.8em;
+    border-left: 5px solid #ff4463; }
+
+  #main {
+    padding-bottom: 30px; }
+    #main #titName {
+      font-size: 6.5em;
+      line-height: 1em; }
+    #main .headerLine {
+      padding-top: 10%; }
+
+  #aboutMe {
+    padding: 2% 0;
+    text-align: center; }
+    #aboutMe #textBig {
+      font-size: 3.8em; }
+    #aboutMe p {
+      font-size: 1.1em; }
+
+  #education #curves {
+    background: none; }
+    #education #curves .textEdu {
+      border-bottom: 1px solid #ff4463; }
+      #education #curves .textEdu:last-child {
+        border-bottom: none; }
+      #education #curves .textEdu .row {
+        margin-bottom: 0; }
+      #education #curves .textEdu h5 {
+        font-size: 1.5em; }
+      #education #curves .textEdu p {
+        font-size: 1.1em; }
+      #education #curves .textEdu .dateEdu {
+        font-size: 1em; }
+
+  #education .download {
+    color: #ff4463;
+    font-size: 20px;
+    font-family: "Raleway-Bold", arial, sans-serif;
+    border-radius: 20px;
+    border: 2px solid #ff4463;
+    margin-bottom: 50px;
+    padding: 3%;
+    width: 100%; }
+    #education .download a:hover {
+      color: #ff4463; }
+
+  #portfolio h3 {
+    font-size: 1.9em; }
+  #portfolio p {
+    font-size: 1.2em;
+    margin: 0 5%; }
+  #portfolio .col:last-child {
+    margin-top: 5%; }
+
+  footer h4 {
+    font-size: 2.2em; }
+  footer img {
+    width: 150px; }
+  footer p {
+    font-size: 1.2em;
+    margin: 2% 10%;
+    line-height: 1.3em; }
+  footer a.btn {
+    margin: 2% 0;
+    width: 50%; } }
+@media screen and (min-width: 640px) and (max-width: 714px) {
+  #main {
+    padding-bottom: 50px; }
+    #main #titName {
+      font-size: 6em;
+      line-height: 1em; }
+    #main .headerLine {
+      padding-top: 9%; }
+
+  #main img {
+    width: 100%; }
+
+  #aboutMe {
+    padding: 2% 0;
+    text-align: justify; }
+    #aboutMe #textBig {
+      font-size: 3.4em; }
+    #aboutMe p {
+      font-size: 1em; }
+
+  #education .download {
+    color: #ff4463;
+    font-size: 1.5em;
+    font-family: "Raleway-Bold", arial, sans-serif;
+    border-radius: 20px;
+    border: 2px solid #ff4463;
+    margin-bottom: 60px;
+    padding: 3%;
+    width: 100%; }
+    #education .download a:hover {
+      color: #ff4463; }
+
+  #education #curves {
+    background: none; }
+    #education #curves .textEdu {
+      padding-bottom: 4%;
+      border-bottom: 1px solid #ff4463; }
+      #education #curves .textEdu .row {
+        margin-bottom: 0; }
+    #education #curves .rstOffset {
+      padding-left: 15px; } }
+@media screen and (min-width: 715px) and (max-width: 992px) {
+  #main {
+    padding-bottom: 30px; }
+    #main .headerLine {
+      padding-top: 2%; }
+
+  #aboutMe {
+    padding: 2% 0; }
+    #aboutMe #textBig {
+      font-size: 3.4em; }
+    #aboutMe p {
+      font-size: 1em; }
+
+  #education #curves {
+    background: none; }
+    #education #curves .textEdu {
+      border-bottom: 1px solid #ff4463; }
+      #education #curves .textEdu:last-child {
+        border-bottom: none; }
+      #education #curves .textEdu .row {
+        margin-bottom: 0; }
+      #education #curves .textEdu h5 {
+        font-size: 2em; }
+      #education #curves .textEdu p {
+        font-size: 1.3em; }
+      #education #curves .textEdu .dateEdu {
+        font-size: 1em; }
+
+  #education .download {
+    color: #ff4463;
+    font-size: 1.5em;
+    font-family: "Raleway-Bold", arial, sans-serif;
+    border-radius: 20px;
+    border: 2px solid #ff4463;
+    margin-bottom: 60px;
+    padding: 3%;
+    width: 100%; }
+    #education .download a:hover {
+      color: #ff4463; }
+
+  #education .gifEducation {
+    width: 60%; }
+  #education .download {
+    padding: 1% 0; }
+  #education #curves {
+    background: none; }
+    #education #curves .textEdu {
+      padding-bottom: 1%; }
+      #education #curves .textEdu h5 {
+        margin-bottom: 4px; }
+      #education #curves .textEdu .rstOffset {
+        margin-left: 0; }
+      #education #curves .textEdu .dateEdu {
+        margin-bottom: 10px; }
+      #education #curves .textEdu img {
+        width: 30%; }
+        #education #curves .textEdu img.logoArea {
+          width: 60%; }
+
+  #portfolio h3 {
+    font-size: 1.8em; }
+  #portfolio p {
+    font-size: 1.1em;
+    margin: 0 12%; }
+
+  footer img {
+    width: 150px; }
+  footer p {
+    font-size: 1.3em; } }
+@media screen and (min-width: 993px) and (max-width: 1025px) {
+  #main .headerLine {
+    padding-top: 2%; }
+
+  #aboutMe {
+    padding: 2% 0; }
+    #aboutMe #textBig {
+      font-size: 3.8em; }
+    #aboutMe p {
+      font-size: 1em; }
+
+  #education #curves {
+    background-size: 395px; }
+    #education #curves .textEdu {
+      padding-bottom: 1%; }
+      #education #curves .textEdu h5 {
+        font-size: 1.3em; }
+      #education #curves .textEdu .rstOffset {
+        margin-left: 15%; }
+
+  #portfolio p {
+    margin: 0 15%; } }
+
+/*# sourceMappingURL=main.css.map */
