@@ -1,0 +1,661 @@
+// VARIABLES
+$pink: rgb(255,68,99);
+$yellow: rgb(242,214,107);
+$black: rgb(0,0,0);
+$grey: rgb(67,65,66);
+$silver: rgb(66,63,64);
+$ghost: rgba(255,255,255,0.2);
+$black: rgb(32,23,19);
+// BREAKPOINTS
+$width-ultraextrasmall: "screen and (max-width: 479px)";
+$width-extrasmall: "screen and (min-width: 480px) and (max-width: 639px)";
+$width-small: "screen and (min-width: 640px) and (max-width: 714px)";
+$width-medium: "screen and (min-width: 715px) and (max-width: 992px)";
+$width-large: "screen and (min-width: 993px) and (max-width: 1025px)";
+
+
+// MIXINS
+@mixin font-otf($font-name, $file-name) { 
+	@font-face {
+		font-family: quote($font-name);
+		src: url($file-name + '.otf') format('opentype');
+	}
+}
+@mixin font-ttf($font-name, $file-name) { 
+	@font-face {
+		font-family: quote($font-name);
+		src: url($file-name + '.ttf') format('truetype');
+	}
+}
+@mixin font($color, $size, $font) {
+	color: $color;
+	font-size: $size;
+	font-family: $font, arial, sans-serif;
+}
+@mixin transition($trans-time) {
+	-webkit-transition: all $trans-time ease-out;
+	-moz-transition: all $trans-time ease-out;
+	-o-transition: all $trans-time ease-out;
+	transition: all $trans-time ease-out;
+}
+@mixin background-size($bksize){
+	-webkit-background-size: $bksize;
+	-moz-background-size: $bksize;
+	-o-background-size: $bksize;
+	background-size: $bksize;
+}
+@mixin textMain($sizePB, $sizeTitName, $ptHeader){
+	#main {
+		padding-bottom: $sizePB;
+		#titName{
+			font-size: $sizeTitName;
+			line-height: 1em;
+		}
+		.headerLine{
+			padding-top: $ptHeader;
+		}
+	}
+}
+@mixin textAbout($align, $sizeTextBig, $sizeP) {
+	#aboutMe{
+		padding: 2% 0;
+		text-align: $align;
+		#textBig{
+			font-size: $sizeTextBig;
+		}
+		p {
+			font-size: $sizeP;
+		}
+	}
+}
+@mixin textEducation($sizeH5,$sizeP,$sizeDateEdu){
+	#education{
+		#curves {
+			background: none;
+			.textEdu {
+				border-bottom: 1px solid $pink;
+				&:last-child {
+					border-bottom: none;
+				}
+				.row {
+					margin-bottom: 0;
+				}
+				h5{
+					font-size: $sizeH5;
+				}
+				p {
+					font-size: $sizeP;
+				}
+				.dateEdu{
+					font-size: $sizeDateEdu;
+				}
+			}
+		}
+	}
+}
+@mixin textPortafolio($sizeH3,$sizeP){
+	#portfolio{
+		h3{
+			font-size: $sizeH3;
+		}
+		p {
+			font-size: $sizeP;
+			margin: 0 5%;
+		}
+		.col:last-child{
+			margin-top: 5%;
+		}
+	}
+}
+// CSS ------------------------------------------------------------------------------
+// * {
+// 	content-box: border-box;
+// }
+@include font-otf('Bromello', '../fonts/bromello/bromello');
+@include font-ttf('Raleway-Regular', '../fonts/raleway/Raleway-Regular');
+@include font-ttf('Raleway-Medium', '../fonts/raleway/Raleway-Medium');
+@include font-ttf('Raleway-SemiBold', '../fonts/raleway/Raleway-SemiBold');
+@include font-ttf('Raleway-Bold', '../fonts/raleway/Raleway-Bold');
+
+::-moz-selection { /* Code for Firefox */
+	color: $pink;
+	background: white;
+}
+::selection {
+	color: $pink;
+	background: white;
+}
+.container {
+	width: 85%;
+}
+h2 {
+	@include font($pink, 3.5em, 'Raleway-Bold');
+	border-left: 6px solid $pink;
+}
+#textBig {
+	@include font($pink, 4em, 'Raleway-Bold')
+}
+
+
+
+
+
+// PORTADA
+#main {
+	padding-bottom: 100px;
+	#titName {
+		@include font($black, 8em,'Bromello');
+	}
+	img {
+		margin-bottom: 41px;
+		width: 85%;
+		margin-top: 36px;
+	}
+}
+
+#navbar {
+	z-index: 1000;
+	position: absolute;
+	left: 50%;
+	margin-left: -47px;
+}
+
+nav {
+	background-color: $black;
+	.brand-logo{
+		@include font($yellow,1.6em,'Bromello');
+	}
+}
+#developerWeb {
+	padding: 3% 0;
+	.card {
+		.card-title {
+			@include font(1em, $black, 'Raleway-Medium');
+		}
+		.card-reveal {
+			background-color: $pink;
+			.linkProject {
+				color: white;
+			}
+		}
+	}
+}
+
+#graphicDesign {
+	padding: 3% 0;
+}
+
+#myIcon {
+	img {
+		width: 200px;
+	}
+}
+#bgmenu {
+	background: $pink;
+	display: inline-block;
+	height: 40px;
+	position: fixed;
+	width: 80px;
+	z-index: 20000;
+	&:before {
+		border-top: 20px solid #ff4463;
+		border-left: 41px solid transparent;
+		border-right: 40px solid transparent;
+		content: "";
+		height: 0;
+		left: 0;
+		position: absolute;
+		top: 40px;
+		width: 0;
+	}
+}
+
+.headerLine {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	padding-top: 2%;
+	background: $yellow center center no-repeat;
+	@include background-size(cover);
+	&:after {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		pointer-events: none;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		@include background-size(cover);
+		border-bottom: 150px solid white;
+		border-left: 3000px solid transparent;
+	}
+}
+
+.hamburguer {
+	width: 32px;
+	height: 20px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1;
+	*display: inline;
+	transition: .4s;
+	.bar {
+		position: absolute;
+		width: 32px;
+		height: 5px;
+		background: #FFF;
+		transition: .2s;
+		outline: 1px solid transparent;
+	}
+	.bar-1 {
+		top: 0;
+		left: 0;
+	}
+	.bar-2 {
+		top: 10px;
+		left: 0;
+	}
+	.bar-3 {
+		top: 20px;
+		left: 0;
+	}
+}
+
+#slide-out {
+	background-color: $black;
+	padding-top: 5%;
+	text-align: center;
+	width: 90%;
+	a {
+		@include font(white,1.5em,"Raleway-Medium");
+		&:hover {
+			color: $pink;
+			text-decoration: underline;
+		}
+	}
+	li.name{
+		@include font($silver,3em,"Bromello");
+	}
+}
+
+
+// ABOUT ME
+#aboutMe {
+	padding: 3% 0;
+	p {
+		@include font($grey,1.2em,'Raleway-SemiBold');
+		span {
+			@include font($pink, 1.2em, 'Raleway-Bold')
+		}
+	}
+	#hexagonImg{
+		img{
+			width: 70%;
+		}
+	}
+}
+
+
+// EDUCATION
+#education {
+	padding: 3% 0;
+	img {
+		width: 50%;
+	}
+	.gifEducation {
+		width: 100%;
+	}
+	#curves {
+		.textEdu {
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+	.download {
+		@include font($pink,1.8em,'Raleway-Bold');
+		border-radius: 45px;
+		border: 2px solid $pink;
+		margin: 0 auto;
+		width: 80%;
+		a {
+			&:hover {
+				color: $pink;
+			}
+		}
+	}
+	#curves {
+		background-image: url("../svg/shapeEdu.svg");
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		@include background-size(430px);
+		.textEdu {
+			padding-bottom: 7%;
+			h5 {
+				@include font(darken($pink, 20),1.5em,'Raleway-SemiBold');
+			}
+			p {
+				@include font($grey,1.2em,'Raleway-Regular');
+				margin-top: 0;
+				line-height: normal;
+				&.dateEdu {
+					font-family: 'Raleway-SemiBold';
+					margin-top: 0;
+				}
+			}
+			.mg-b0 {
+				margin-bottom: 0;
+			}
+			img.logoArea{
+				width: 100%;
+			}
+		}
+	}
+}
+
+// EXPERIENCE
+#experience {
+	padding: 3% 0;
+	h4 {
+		@include font($pink,1.8em,'Raleway-SemiBold');
+	}
+	p{
+		@include font($black,1.2em,'Raleway-Medium');
+		text-align: justify;
+		&.boldText {
+			@include font($black,1.2em,'Raleway-Bold');
+			margin: 0;
+		}
+	}
+	.slider {
+		.indicators .indicator-item{
+			background-color: $yellow;
+			width: 20px;
+			height: 20px;
+			&.active {
+				background-color: $pink;
+			}
+		}
+		.slides {
+			background-color: white;
+		}
+	}
+}
+
+// PORTFOLIO
+#portfolio {
+	background: url("../images/bgportfolio.jpg") 0 100% no-repeat fixed;
+	@include background-size(cover);
+	.bgportfolio {
+		background-color: rgba(255,67,99,0.7);
+		padding: 3% 0;
+	}
+	h2 {
+		color: white;
+		border-left: 6px solid white;
+	}
+	h3 {
+		@include font($yellow,2em,'Raleway-Bold')
+	}
+	p {
+		@include font(white,1.3em,'Raleway-Regular');
+    margin: 0 20%;
+	}
+	img {
+		width: 50%;
+	}
+}
+
+
+
+// FOOTER
+footer {
+	background-color: $black;
+	padding: 3% 0;
+	h4 {
+		@include font(white,2.6em,'Raleway-Bold');
+	}
+	img {
+		width: 200px;
+	}
+	p {
+		@include font($pink,1.6em,'Raleway-Medium');
+	}
+	a.btn {
+		background-color: $ghost;
+		border: 2px solid white;
+		width: 100%;
+		&:hover {
+			background-color: $pink;
+		}
+	}
+	.index {
+		color: white;
+		cursor: pointer;
+	}
+	span {
+		@include font($yellow,1.5em,'Bromello');
+	}
+}
+
+
+
+@mixin gifEducation($sizeFont,$sizeBorder,$sizePB){
+	#education{
+		.download {
+			@include font($pink,$sizeFont,'Raleway-Bold');
+			border-radius: $sizeBorder;
+			border: 2px solid $pink;
+			margin-bottom: $sizePB;
+			padding: 3%;
+			width: 100%;
+			a {
+				&:hover {
+					color: $pink;
+				}
+			}
+		}
+	}
+}
+
+@media #{$width-ultraextrasmall} {
+	#navbar{
+		margin-left: -35px;
+		#bgmenu{
+			height: 30px;
+			width: 70px;
+			&:before{
+				border-left: 35px solid transparent;
+				border-right: 35px solid transparent;
+				top: 30px;
+			}
+		}
+	}
+	h2 {
+		font-size: 2.6em;
+		border-left: 4px solid $pink;
+	}
+	@include textMain(30px,5.2em,12%);
+	@include textAbout(center,3.2em, 0.9em);
+	@include textEducation(1.1em,0.9em,0.8em);
+	@include gifEducation(1.5em,20px,50px);
+	@include textPortafolio(1.6em,1em);
+	footer {
+		h4 {
+			font-size: 1.8em;
+		}
+		img {
+			width: 150px;
+		}
+		p {
+			font-size: 1em;
+			margin: 0 10%;
+		}
+		a.btn{
+			margin: 2% 0;
+			width: 50%;
+		}
+	}
+}
+@media #{$width-extrasmall} {
+	h2 {
+		font-size: 2.8em;
+		border-left: 5px solid $pink;
+	}
+	@include textMain(30px,6.5em,10%);
+	@include textAbout(center,3.8em, 1.1em);
+	@include textEducation(1.5em,1.1em,1em);
+	@include gifEducation(20px,20px,50px);
+	@include textPortafolio(1.9em,1.2em);
+
+	footer {
+		h4 {
+			font-size: 2.2em;
+		}
+		img {
+			width: 150px;
+		}
+		p {
+			font-size: 1.2em;
+			margin: 2% 10%;
+			line-height: 1.3em;
+		}
+		a.btn{
+			margin: 2% 0;
+			width: 50%;
+		}
+	}
+}
+@media #{$width-small} {
+	@include textMain(50px,6em,9%);
+	#main {
+		img {
+			width: 100%;
+		}
+	}
+	@include textAbout(justify,3.4em, 1em);
+	@include gifEducation(1.5em,20px,60px);
+	#education{
+		#curves {
+			background: none;
+			.textEdu {
+				padding-bottom: 4%;
+				border-bottom: 1px solid $pink;
+				.row {
+					margin-bottom: 0;
+				}
+			}
+			.rstOffset {
+				padding-left: 15px;
+			}
+		}
+	}
+}
+
+@media #{$width-medium} {
+	#main {
+		padding-bottom: 30px;
+		.headerLine {
+			padding-top: 2%;
+		}
+	}
+	#aboutMe{
+		padding: 2% 0;
+		#textBig{
+			font-size: 3.4em;
+		}
+		p {
+			font-size: 1em;
+		}
+	}
+	@include textEducation(2em,1.3em,1em);
+	@include gifEducation(1.5em,20px,60px);
+	#education {
+		.gifEducation {
+			width: 60%;
+		}
+		.download {
+			padding: 1% 0;
+		}
+		#curves {
+			background: none;
+			.textEdu {
+				padding-bottom: 1%;
+				h5{
+					margin-bottom: 4px;
+				}
+				.rstOffset{
+					margin-left: 0;
+				}
+				.dateEdu{
+					margin-bottom: 10px;
+				}
+				img {
+					width: 30%;
+					&.logoArea{
+						width: 60%;
+					}
+				}
+			}
+		}
+	}
+	#portfolio{
+		h3{
+			font-size: 1.8em;
+		}
+		p {
+			font-size: 1.1em;
+			margin: 0 12%;
+		}
+	}
+	footer {
+		img {
+			width: 150px;
+		}
+		p {
+	    font-size: 1.3em;
+		}
+	}
+}
+@media #{$width-large} {
+	#main {
+		.headerLine {
+			padding-top: 2%;
+		}
+	}
+	#aboutMe{
+		padding: 2% 0;
+		#textBig{
+			font-size: 3.8em;
+		}
+		p {
+			font-size: 1em;
+		}
+	}
+	#education {
+		#curves {
+			background-size: 395px;
+			.textEdu {
+				padding-bottom: 1%;
+				h5{
+					font-size: 1.3em;
+				}
+				.rstOffset{
+					margin-left: 15%;
+				}
+			}
+		}
+	}
+	#portfolio {
+		p {
+			margin: 0 15%;
+		}
+	}
+}
