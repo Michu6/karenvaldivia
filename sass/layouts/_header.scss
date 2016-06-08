@@ -1,0 +1,121 @@
+// NAV BAR INDEX.HTML
+
+
+#navbar {
+	z-index: 1000;
+	position: absolute;
+	left: 50%;
+	margin-left: -47px;
+}
+nav {
+	background-color: $black;
+	.brand-logo{
+		@include font($yellow,1.6em,'Bromello');
+	}
+}
+#myIcon {
+	padding: 2% 0;
+	img {
+		width: 200px;
+	}
+}
+#bgmenu {
+	background: $pink;
+	display: inline-block;
+	height: 40px;
+	position: fixed;
+	width: 80px;
+	z-index: 20000;
+	&:before {
+		border-top: 20px solid #ff4463;
+		border-left: 41px solid transparent;
+		border-right: 40px solid transparent;
+		content: "";
+		height: 0;
+		left: 0;
+		position: absolute;
+		top: 40px;
+		width: 0;
+	}
+}
+
+.headerLine {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	padding-top: 2%;
+	background: $yellow center center no-repeat;
+	@include background-size(cover);
+	&:after {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		pointer-events: none;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		@include background-size(cover);
+		border-bottom: 150px solid white;
+		border-left: 3000px solid transparent;
+	}
+}
+
+.hamburguer {
+	width: 32px;
+	height: 20px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1;
+	*display: inline;
+	transition: .4s;
+	.bar {
+		position: absolute;
+		width: 32px;
+		height: 5px;
+		background: #FFF;
+		transition: .2s;
+		outline: 1px solid transparent;
+	}
+	.bar-1 {
+		top: 0;
+		left: 0;
+	}
+	.bar-2 {
+		top: 10px;
+		left: 0;
+	}
+	.bar-3 {
+		top: 20px;
+		left: 0;
+	}
+}
+
+// SLIDE OUT
+#slide-out {
+	background-color: $black;
+	padding-top: 5%;
+	text-align: center;
+	width: 90%;
+	a {
+		@include font(white,1.5em,"Raleway-Medium");
+		&:hover {
+			color: $pink;
+			text-decoration: underline;
+		}
+	}
+	li.name{
+		@include font($silver,3em,"Bromello");
+	}
+}
+
+// PORTFOLIO NAVBAR
+.navbar-fixed .previous{
+	padding-top: 4%;
+}

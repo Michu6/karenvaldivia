@@ -1,0 +1,22 @@
+// TYPOGRAPHY
+@include font-otf('Bromello', '../fonts/bromello/bromello');
+@include font-ttf('Raleway-Regular', '../fonts/raleway/Raleway-Regular');
+@include font-ttf('Raleway-Medium', '../fonts/raleway/Raleway-Medium');
+@include font-ttf('Raleway-SemiBold', '../fonts/raleway/Raleway-SemiBold');
+@include font-ttf('Raleway-Bold', '../fonts/raleway/Raleway-Bold');
+
+::-moz-selection { /* Code for Firefox */
+	color: $pink;
+	background: white;
+}
+::selection {
+	color: $pink;
+	background: white;
+}
+.container {
+	width: 85%;
+}
+h2 {
+	@include font($pink, 3.5em, 'Raleway-Bold');
+	border-left: 6px solid $pink;
+}

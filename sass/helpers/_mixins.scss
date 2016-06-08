@@ -1,0 +1,110 @@
+// MIXINS
+@mixin font-otf($font-name, $file-name) { 
+	@font-face {
+		font-family: quote($font-name);
+		src: url($file-name + '.otf') format('opentype');
+	}
+}
+@mixin font-ttf($font-name, $file-name) { 
+	@font-face {
+		font-family: quote($font-name);
+		src: url($file-name + '.ttf') format('truetype');
+	}
+}
+@mixin font($color, $size, $font) {
+	color: $color;
+	font-size: $size;
+	font-family: $font, arial, sans-serif;
+}
+@mixin transition($trans-time) {
+	-webkit-transition: all $trans-time ease-out;
+	-moz-transition: all $trans-time ease-out;
+	-o-transition: all $trans-time ease-out;
+	transition: all $trans-time ease-out;
+}
+@mixin background-size($bksize){
+	-webkit-background-size: $bksize;
+	-moz-background-size: $bksize;
+	-o-background-size: $bksize;
+	background-size: $bksize;
+}
+@mixin textMain($sizePB, $sizeTitName, $ptHeader){
+	#main {
+		padding-bottom: $sizePB;
+		#titName{
+			font-size: $sizeTitName;
+			line-height: 1em;
+		}
+		.headerLine{
+			padding-top: $ptHeader;
+		}
+	}
+}
+@mixin textAbout($align, $sizeTextBig, $sizeP) {
+	#aboutMe{
+		padding: 2% 0;
+		text-align: $align;
+		#textBig{
+			font-size: $sizeTextBig;
+		}
+		p {
+			font-size: $sizeP;
+		}
+	}
+}
+@mixin textEducation($sizeH5,$sizeP,$sizeDateEdu){
+	#education{
+		#curves {
+			background: none;
+			.textEdu {
+				border-bottom: 1px solid $pink;
+				&:last-child {
+					border-bottom: none;
+				}
+				.row {
+					margin-bottom: 0;
+				}
+				h5{
+					font-size: $sizeH5;
+				}
+				p {
+					font-size: $sizeP;
+				}
+				.dateEdu{
+					font-size: $sizeDateEdu;
+				}
+			}
+		}
+	}
+}
+@mixin textPortafolio($sizeH3,$sizeP){
+	#portfolio{
+		h3{
+			font-size: $sizeH3;
+		}
+		p {
+			font-size: $sizeP;
+			margin: 0 5%;
+		}
+		.col:last-child{
+			margin-top: 5%;
+		}
+	}
+}
+@mixin gifEducation($sizeFont,$sizeBorder,$sizePB){
+	#education{
+		.download {
+			@include font($pink,$sizeFont,'Raleway-Bold');
+			border-radius: $sizeBorder;
+			border: 2px solid $pink;
+			margin-bottom: $sizePB;
+			padding: 3%;
+			width: 100%;
+			a {
+				&:hover {
+					color: $pink;
+				}
+			}
+		}
+	}
+}

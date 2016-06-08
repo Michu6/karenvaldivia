@@ -1,0 +1,118 @@
+// PORTADA
+#main {
+	padding-bottom: 100px;
+	#titName {
+		@include font($black, 8em,'Bromello');
+	}
+	img {
+		margin-bottom: 41px;
+		width: 85%;
+		margin-top: 36px;
+	}
+}
+
+// ABOUT ME
+#aboutMe {
+	padding: 3% 0;
+	p {
+		@include font($grey,1.2em,'Raleway-SemiBold');
+		span {
+			@include font($pink, 1.2em, 'Raleway-Bold')
+		}
+	}
+	#textBig {
+		@include font($pink, 4em, 'Raleway-Bold')
+	}
+	#hexagonImg{
+		img{
+			width: 70%;
+		}
+	}
+}
+
+
+// EDUCATION
+#education {
+	padding: 3% 0;
+	img {
+		width: 50%;
+	}
+	.gifEducation {
+		width: 100%;
+	}
+	#curves {
+		.textEdu {
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+	.download {
+		@include font($pink,1.8em,'Raleway-Bold');
+		border-radius: 45px;
+		border: 2px solid $pink;
+		margin: 0 auto;
+		width: 80%;
+		a {
+			&:hover {
+				color: $pink;
+			}
+		}
+	}
+	#curves {
+		background-image: url("../svg/shapeEdu.svg");
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		@include background-size(430px);
+		.textEdu {
+			padding-bottom: 7%;
+			h5 {
+				@include font(darken($pink, 20),1.5em,'Raleway-SemiBold');
+			}
+			p {
+				@include font($grey,1.2em,'Raleway-Regular');
+				margin-top: 0;
+				line-height: normal;
+				&.dateEdu {
+					font-family: 'Raleway-SemiBold';
+					margin-top: 0;
+				}
+			}
+			.mg-b0 {
+				margin-bottom: 0;
+			}
+			img.logoArea{
+				width: 100%;
+			}
+		}
+	}
+}
+
+// EXPERIENCE
+#experience {
+	padding: 3% 0;
+	h4 {
+		@include font($pink,1.8em,'Raleway-SemiBold');
+	}
+	p{
+		@include font($black,1.2em,'Raleway-Medium');
+		text-align: justify;
+		&.boldText {
+			@include font($black,1.2em,'Raleway-Bold');
+			margin: 0;
+		}
+	}
+	.slider {
+		.indicators .indicator-item{
+			background-color: $yellow;
+			width: 20px;
+			height: 20px;
+			&.active {
+				background-color: $pink;
+			}
+		}
+		.slides {
+			background-color: white;
+		}
+	}
+}

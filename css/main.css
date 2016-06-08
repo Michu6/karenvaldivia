@@ -31,22 +31,6 @@ h2 {
   font-family: "Raleway-Bold", arial, sans-serif;
   border-left: 6px solid #ff4463; }
 
-#textBig {
-  color: #ff4463;
-  font-size: 4em;
-  font-family: "Raleway-Bold", arial, sans-serif; }
-
-#main {
-  padding-bottom: 100px; }
-  #main #titName {
-    color: #201713;
-    font-size: 8em;
-    font-family: "Bromello", arial, sans-serif; }
-  #main img {
-    margin-bottom: 41px;
-    width: 85%;
-    margin-top: 36px; }
-
 #navbar {
   z-index: 1000;
   position: absolute;
@@ -60,22 +44,10 @@ nav {
     font-size: 1.6em;
     font-family: "Bromello", arial, sans-serif; }
 
-#developerWeb {
-  padding: 3% 0; }
-  #developerWeb .card .card-title {
-    color: 1em;
-    font-size: #201713;
-    font-family: "Raleway-Medium", arial, sans-serif; }
-  #developerWeb .card .card-reveal {
-    background-color: #ff4463; }
-    #developerWeb .card .card-reveal .linkProject {
-      color: white; }
-
-#graphicDesign {
-  padding: 3% 0; }
-
-#myIcon img {
-  width: 200px; }
+#myIcon {
+  padding: 2% 0; }
+  #myIcon img {
+    width: 200px; }
 
 #bgmenu {
   background: #ff4463;
@@ -169,6 +141,20 @@ nav {
     font-size: 3em;
     font-family: "Bromello", arial, sans-serif; }
 
+.navbar-fixed .previous {
+  padding-top: 4%; }
+
+#main {
+  padding-bottom: 100px; }
+  #main #titName {
+    color: #201713;
+    font-size: 8em;
+    font-family: "Bromello", arial, sans-serif; }
+  #main img {
+    margin-bottom: 41px;
+    width: 85%;
+    margin-top: 36px; }
+
 #aboutMe {
   padding: 3% 0; }
   #aboutMe p {
@@ -179,6 +165,10 @@ nav {
       color: #ff4463;
       font-size: 1.2em;
       font-family: "Raleway-Bold", arial, sans-serif; }
+  #aboutMe #textBig {
+    color: #ff4463;
+    font-size: 4em;
+    font-family: "Raleway-Bold", arial, sans-serif; }
   #aboutMe #hexagonImg img {
     width: 70%; }
 
@@ -253,30 +243,6 @@ nav {
   #experience .slider .slides {
     background-color: white; }
 
-#portfolio {
-  background: url("../images/bgportfolio.jpg") 0 100% no-repeat fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  #portfolio .bgportfolio {
-    background-color: rgba(255, 67, 99, 0.7);
-    padding: 3% 0; }
-  #portfolio h2 {
-    color: white;
-    border-left: 6px solid white; }
-  #portfolio h3 {
-    color: #f2d66b;
-    font-size: 2em;
-    font-family: "Raleway-Bold", arial, sans-serif; }
-  #portfolio p {
-    color: white;
-    font-size: 1.3em;
-    font-family: "Raleway-Regular", arial, sans-serif;
-    margin: 0 20%; }
-  #portfolio img {
-    width: 50%; }
-
 footer {
   background-color: #201713;
   padding: 3% 0; }
@@ -303,6 +269,52 @@ footer {
     color: #f2d66b;
     font-size: 1.5em;
     font-family: "Bromello", arial, sans-serif; }
+
+#portfolio {
+  background: url("../images/bgportfolio.jpg") 0 100% no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  #portfolio .bgportfolio {
+    background-color: rgba(255, 67, 99, 0.7);
+    padding: 3% 0; }
+  #portfolio h2 {
+    color: white;
+    border-left: 6px solid white; }
+  #portfolio h3 {
+    color: #f2d66b;
+    font-size: 2em;
+    font-family: "Raleway-Bold", arial, sans-serif; }
+  #portfolio p {
+    color: white;
+    font-size: 1.3em;
+    font-family: "Raleway-Regular", arial, sans-serif;
+    margin: 0 20%; }
+  #portfolio img {
+    width: 50%; }
+  #portfolio .btn-floating {
+    background-color: #201713;
+    margin-top: 20px; }
+
+#developerWeb, #graphicDesign {
+  padding: 3% 0; }
+  #developerWeb .card .card-title, #graphicDesign .card .card-title {
+    color: 1em;
+    font-size: #201713;
+    font-family: "Raleway-Medium", arial, sans-serif; }
+  #developerWeb .card .card-reveal, #graphicDesign .card .card-reveal {
+    background-color: #ff4463; }
+    #developerWeb .card .card-reveal .linkProject, #graphicDesign .card .card-reveal .linkProject {
+      color: white; }
+  #developerWeb .card .card-content a:hover, #graphicDesign .card .card-content a:hover {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    color: #ff4463; }
+  #developerWeb .card .card-content .fa-github, #graphicDesign .card .card-content .fa-github {
+    font-size: 25px; }
 
 @media screen and (max-width: 479px) {
   #navbar {
