@@ -1,0 +1,51 @@
+// PORTFOLIO
+#portfolio {
+	background: url("../images/bgportfolio.jpg") 0 100% no-repeat fixed;
+	@include background-size(cover);
+	.bgportfolio {
+		background-color: rgba(255,67,99,0.7);
+		padding: 3% 0;
+	}
+	h2 {
+		color: white;
+		border-left: 6px solid white;
+	}
+	h3 {
+		@include font($yellow,2em,'Raleway-Bold')
+	}
+	p {
+		@include font(white,1.3em,'Raleway-Regular');
+    margin: 0 20%;
+	}
+	img {
+		width: 50%;
+	}
+	.btn-floating {
+		background-color: $black;
+		margin-top: 20px;
+	}
+}
+
+#developerWeb, #graphicDesign {
+	padding: 3% 0;
+	.card {
+		.card-title {
+			@include font(1em, $black, 'Raleway-Medium');
+		}
+		.card-reveal {
+			background-color: $pink;
+			.linkProject {
+				color: white;
+			}
+		}
+		.card-content {
+			a:hover{
+				@include transition(0.2s);
+				color: $pink;
+			}
+			.fa-github {
+				font-size: 25px;
+			}
+		}
+	}
+}

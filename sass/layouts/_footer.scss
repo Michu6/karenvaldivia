@@ -1,0 +1,29 @@
+// FOOTER
+footer {
+	background-color: $black;
+	padding: 3% 0;
+	h4 {
+		@include font(white,2.6em,'Raleway-Bold');
+	}
+	img {
+		width: 200px;
+	}
+	p {
+		@include font($pink,1.6em,'Raleway-Medium');
+	}
+	a.btn {
+		background-color: $ghost;
+		border: 2px solid white;
+		width: 100%;
+		&:hover {
+			background-color: $pink;
+		}
+	}
+	.index {
+		color: white;
+		cursor: pointer;
+	}
+	span {
+		@include font($yellow,1.5em,'Bromello');
+	}
+}

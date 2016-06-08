@@ -1,0 +1,15 @@
+// VARIABLES
+$pink: rgb(255,68,99);
+$yellow: rgb(242,214,107);
+$black: rgb(0,0,0);
+$grey: rgb(67,65,66);
+$silver: rgb(66,63,64);
+$ghost: rgba(255,255,255,0.2);
+$black: rgb(32,23,19);
+
+// BREAKPOINTS
+$width-ultraextrasmall: "screen and (max-width: 479px)";
+$width-extrasmall: "screen and (min-width: 480px) and (max-width: 639px)";
+$width-small: "screen and (min-width: 640px) and (max-width: 714px)";
+$width-medium: "screen and (min-width: 715px) and (max-width: 992px)";
+$width-large: "screen and (min-width: 993px) and (max-width: 1025px)";

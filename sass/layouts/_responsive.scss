@@ -1,0 +1,194 @@
+@media #{$width-ultraextrasmall} {
+	#navbar{
+		margin-left: -35px;
+		#bgmenu{
+			height: 30px;
+			width: 70px;
+			&:before{
+				border-left: 35px solid transparent;
+				border-right: 35px solid transparent;
+				top: 30px;
+			}
+		}
+	}
+	h2 {
+		font-size: 2.6em;
+		border-left: 4px solid $pink;
+	}
+	@include textMain(30px,5.2em,12%);
+	@include textAbout(center,3.2em, 0.9em);
+	@include textEducation(1.1em,0.9em,0.8em);
+	@include gifEducation(1.5em,20px,50px);
+	@include textPortafolio(1.6em,1em);
+	footer {
+		h4 {
+			font-size: 1.8em;
+		}
+		img {
+			width: 150px;
+		}
+		p {
+			font-size: 1em;
+			margin: 0 10%;
+		}
+		a.btn{
+			margin: 2% 0;
+			width: 50%;
+		}
+	}
+}
+@media #{$width-extrasmall} {
+	h2 {
+		font-size: 2.8em;
+		border-left: 5px solid $pink;
+	}
+	@include textMain(30px,6.5em,10%);
+	@include textAbout(center,3.8em, 1.1em);
+	@include textEducation(1.5em,1.1em,1em);
+	@include gifEducation(20px,20px,50px);
+	@include textPortafolio(1.9em,1.2em);
+
+	footer {
+		h4 {
+			font-size: 2.2em;
+		}
+		img {
+			width: 150px;
+		}
+		p {
+			font-size: 1.2em;
+			margin: 2% 10%;
+			line-height: 1.3em;
+		}
+		a.btn{
+			margin: 2% 0;
+			width: 50%;
+		}
+	}
+}
+@media #{$width-small} {
+	@include textMain(50px,6em,9%);
+	#main {
+		img {
+			width: 100%;
+		}
+	}
+	@include textAbout(justify,3.4em, 1em);
+	@include gifEducation(1.5em,20px,60px);
+	#education{
+		#curves {
+			background: none;
+			.textEdu {
+				padding-bottom: 4%;
+				border-bottom: 1px solid $pink;
+				.row {
+					margin-bottom: 0;
+				}
+			}
+			.rstOffset {
+				padding-left: 15px;
+			}
+		}
+	}
+}
+
+@media #{$width-medium} {
+	#main {
+		padding-bottom: 30px;
+		.headerLine {
+			padding-top: 2%;
+		}
+	}
+	#aboutMe{
+		padding: 2% 0;
+		#textBig{
+			font-size: 3.4em;
+		}
+		p {
+			font-size: 1em;
+		}
+	}
+	@include textEducation(2em,1.3em,1em);
+	@include gifEducation(1.5em,20px,60px);
+	#education {
+		.gifEducation {
+			width: 60%;
+		}
+		.download {
+			padding: 1% 0;
+		}
+		#curves {
+			background: none;
+			.textEdu {
+				padding-bottom: 1%;
+				h5{
+					margin-bottom: 4px;
+				}
+				.rstOffset{
+					margin-left: 0;
+				}
+				.dateEdu{
+					margin-bottom: 10px;
+				}
+				img {
+					width: 30%;
+					&.logoArea{
+						width: 60%;
+					}
+				}
+			}
+		}
+	}
+	#portfolio{
+		h3{
+			font-size: 1.8em;
+		}
+		p {
+			font-size: 1.1em;
+			margin: 0 12%;
+		}
+	}
+	footer {
+		img {
+			width: 150px;
+		}
+		p {
+	    font-size: 1.3em;
+		}
+	}
+}
+@media #{$width-large} {
+	#main {
+		.headerLine {
+			padding-top: 2%;
+		}
+	}
+	#aboutMe{
+		padding: 2% 0;
+		#textBig{
+			font-size: 3.8em;
+		}
+		p {
+			font-size: 1em;
+		}
+	}
+	#education {
+		#curves {
+			background-size: 395px;
+			.textEdu {
+				padding-bottom: 1%;
+				h5{
+					font-size: 1.3em;
+				}
+				.rstOffset{
+					margin-left: 15%;
+				}
+			}
+		}
+	}
+	#portfolio {
+		p {
+			margin: 0 15%;
+		}
+	}
+}
