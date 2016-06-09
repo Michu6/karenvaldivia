@@ -8,10 +8,6 @@ $(document).ready(function(){
 		$('html, body').stop().animate({
 		scrollTop: $($anchor.attr('href')).offset().top}, 2000, 'easeInOutExpo');
 		event.preventDefault();
-		// $("#slide-out").hide();
-		// $("#sidenav-overlay").hide();
-		// $("#slide-out").show();
-		// $("#sidenav-overlay").show();
 	});
 	
 	$(".index").click(function() {
